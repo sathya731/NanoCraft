@@ -1,0 +1,5 @@
+{
+  "name": "Nano Craft",
+  "description": "An image crafting tool inspired by 'Infinite Craft', where you combine visual concepts to discover new ones using the Gemini 'Nano Banana' model.",
+  "requestFramePermissions": []
+}
