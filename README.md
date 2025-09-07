@@ -24,7 +24,7 @@
 
 ## 🎬 Video Demo
 
-**[Watch 2-minute Demo →](https://youtu.be/pxRk-LZNh44)**
+**[Watch 2-minute Demo →](https://youtu.be/vUhHiYmdfZ8)**
 
 ## 🛠️ Technology Stack
 
