@@ -18,13 +18,13 @@
 
 ## 🚀 Live Demo
 
-**[Try Nano Craft Live →](YOUR_DEPLOYED_URL_HERE)**
+**[Try Nano Craft Live →](https://calm-paletas-dfe2fd.netlify.app/)**
 
 *No installation required - just bring your Gemini API key!*
 
 ## 🎬 Video Demo
 
-**[Watch 2-minute Demo →](YOUR_VIDEO_URL_HERE)**
+**[Watch 2-minute Demo →](https://youtu.be/vUhHiYmdfZ8)**
 
 ## 🛠️ Technology Stack
 
@@ -38,13 +38,13 @@
 
 ### Prerequisites
 - Node.js 16+
-- A Gemini API key ([Get one here](https://ai.google.dev/))
+- A Gemini API key ([Get one here](https://aistudio.google.com/apikey))
 
 ### Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/nano-craft.git
+   git clone https://github.com/sathya731/nano-craft.git
    cd nano-craft
    ```
 
@@ -119,10 +119,6 @@ nano-craft/
 ├── hooks/              # Custom React hooks
 └── types.ts            # TypeScript definitions
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
