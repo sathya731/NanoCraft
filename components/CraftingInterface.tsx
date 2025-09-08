@@ -6,6 +6,7 @@ import Workspace from './Workspace';
 import DiscoveriesPanel from './DiscoveriesPanel';
 import ElementDetailsModal from './ElementDetailsModal';
 import SettingsModal from './SettingsModal';
+import LoadingMessages from './LoadingMessages';
 import { combineElements } from '../services/geminiService';
 import Spinner from './Spinner';
 import { initDB, getAllElementsFromDB, saveElementToDB, clearAllElementsFromDB } from '../utils/db';
@@ -188,7 +189,7 @@ const CraftingInterface: React.FC<CraftingInterfaceProps> = ({ apiKey, onChangeA
         {isLoading && (
             <div className="absolute inset-0 bg-black bg-opacity-70 z-50 flex flex-col items-center justify-center">
                 <Spinner />
-                <p className="mt-4 text-lg text-cyan-300">{loadingMessage}</p>
+                <LoadingMessages primaryMessage={loadingMessage} />
             </div>
         )}
         {error && (

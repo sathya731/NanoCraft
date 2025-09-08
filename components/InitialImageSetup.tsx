@@ -4,6 +4,7 @@ import { CraftedElement } from '../types';
 import { generateInitialInfo } from '../services/geminiService';
 import { fileToBase64, urlToBase64 } from '../utils/imageUtils';
 import Spinner from './Spinner';
+import LoadingMessages from './LoadingMessages';
 import { initDB, saveElementToDB } from '../utils/db';
 
 interface InitialImageSetupProps {
@@ -117,7 +118,7 @@ const InitialImageSetup: React.FC<InitialImageSetupProps> = ({ apiKey, onComplet
         {isLoading ? (
             <div className="text-center">
                 <Spinner />
-                <p className="mt-4 text-xl text-cyan-300">{progressMessage}</p>
+                <LoadingMessages />
                 <p className="text-gray-400">This may take a moment...</p>
             </div>
         ) : (
