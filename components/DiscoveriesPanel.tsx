@@ -2,6 +2,7 @@
 import React from 'react';
 import { CraftedElement } from '../types';
 import ElementCard from './ElementCard';
+import { soundManager } from '../utils/soundManager';
 
 interface DiscoveriesPanelProps {
   elements: CraftedElement[];
@@ -11,6 +12,7 @@ interface DiscoveriesPanelProps {
 const DiscoveriesPanel: React.FC<DiscoveriesPanelProps> = ({ elements, onElementClick }) => {
     const handleDragStart = (e: React.DragEvent<HTMLDivElement>, elementId: string) => {
         e.dataTransfer.setData('elementId', elementId);
+        soundManager.playDragSound();
     };
 
     return (

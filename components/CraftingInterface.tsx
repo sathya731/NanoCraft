@@ -9,6 +9,7 @@ import SettingsModal from './SettingsModal';
 import { combineElements } from '../services/geminiService';
 import Spinner from './Spinner';
 import { initDB, getAllElementsFromDB, saveElementToDB, clearAllElementsFromDB } from '../utils/db';
+import { soundManager } from '../utils/soundManager';
 
 
 interface CraftingInterfaceProps {
@@ -57,6 +58,9 @@ const CraftingInterface: React.FC<CraftingInterfaceProps> = ({ apiKey, onChangeA
     const x = clientX - rect.left - 60; // 60 is half width
     const y = clientY - rect.top - 60; // 60 is half height
     
+    // Play drop sound when element is added to workspace
+    soundManager.playDropSound();
+    
     setWorkspaceElements(prev => [...prev, {
       instanceId: uuidv4(),
       elementId,
@@ -103,6 +107,9 @@ const CraftingInterface: React.FC<CraftingInterfaceProps> = ({ apiKey, onChangeA
   const handleCombine = useCallback(async (elem1InstanceId: string, elem2InstanceId: string) => {
     setIsLoading(true);
     setError(null);
+    
+    // Play combine sound when combination starts
+    soundManager.playCombineSound();
 
     const elem1Instance = workspaceElements.find(e => e.instanceId === elem1InstanceId);
     const elem2Instance = workspaceElements.find(e => e.instanceId === elem2InstanceId);
